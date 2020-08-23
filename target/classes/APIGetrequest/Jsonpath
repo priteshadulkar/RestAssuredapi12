@@ -1,0 +1,39 @@
+{ "store": {
+    "book": [ 
+        { "category": "reference",
+        "author": "Nigel Rees",
+        "title": "Sayings of the Century",
+        "price": 8.95
+      },
+        { "category": "fiction",
+        "author": "Evelyn Waugh",
+        "title": "Sword of Honour",
+        "price": 12.99
+      },
+        { "category": "fiction",
+        "author": "Herman Melville",
+        "title": "Moby Dick",
+        "isbn": "0-553-21311-3",
+        "price": 8.99
+      },
+        { "category": "fiction",
+        "author": "J. R. R. Tolkien",
+        "title": "The Lord of the Rings",
+        "isbn": "0-395-19395-8",
+        "price": 22.99
+      }
+    ],
+    "bicycle": {
+      "color": "red",
+      "price": 19.95
+      $..author= all author
+      $.store.book[0].author = 1st author
+       $.store.book[*].author = all author
+       $.store.book[0]       = all information of the array
+       $.store.book[0,1]       = 1st and 2nd array
+       $.store.book[0:]       = all books from 1st
+       $.store.book[-2:]       = from last se last 2 records
+       	$.store.book[?(@.isbn)}       = it shows a record who have a isbn number
+    }
+  }
+}  
